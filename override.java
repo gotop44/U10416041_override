@@ -5,47 +5,47 @@ import static java.lang.System.out;
 
 class override {
 	public static void main(String[] para) {
-		out.println("========= A Ãş§O¤§ obj1 ª«¥ó =========");
+		out.println("========= A é¡åˆ¥ä¹‹ obj1 ç‰©ä»¶ =========");
 		A obj1 = new A();
 		obj1.fun1();
 		obj1.showAA();
 		obj1.showAA(1111);
 		out.println("obj1.aa = " + obj1.aa);
 
-		out.println("========= B1 Ãş§O¤§ obj2 ª«¥ó =========");
+		out.println("========= B1 é¡åˆ¥ä¹‹ obj2 ç‰©ä»¶ =========");
 		B1 obj2 = new B1();
 		obj2.fun1();
 		obj2.showAA();
 		obj2.showAA(3333);
 		out.println("obj2.aa = " + obj2.aa);
 
-		out.println("========= B2 Ãş§O¤§ obj3 ª«¥ó =========");
+		out.println("========= B2 é¡åˆ¥ä¹‹ obj3 ç‰©ä»¶ =========");
 		B2 obj3 = new B2();
 		obj3.fun1();
 		obj3.showAA();
 		obj3.showAA(6666);
 		out.println("obj3.aa = " + obj3.aa);
 		
-		//===============¤÷Ãş§Oª«¥ó°Ñ¦Ò¤lÃş§O¹êÅé==================
-		//========¥i°Ñ¦Ò¡u¦h«¬¡v¡A¥H¤Î¡uº¡¨¬¡v»Pª«¥óªºÂà«¬=========
+		//==============çˆ¶é¡åˆ¥ç‰©ä»¶åƒè€ƒå­é¡åˆ¥å¯¦é«”=================
+		//=======å¯åƒè€ƒã€Œå¤šå‹ã€ï¼Œä»¥åŠã€Œæ»¿è¶³ã€èˆ‡ç‰©ä»¶çš„è½‰å‹========
 
-		out.println("== A Ãş§Oª«¥ó obj4 °Ñ¦Ò B1 ¤§ª«¥ó¹êÅé ==");
+		out.println("== A é¡åˆ¥ç‰©ä»¶ obj4 åƒè€ƒ B1 ä¹‹ç‰©ä»¶å¯¦é«” ==");
 		A obj4 = new B1();
 		obj4.fun1();
 		obj4.showAA();
 		obj4.showAA(7777);
 		out.println("obj4.aa = " + obj4.aa);
 
-		out.println("== A Ãş§Oª«¥ó obj5 °Ñ¦Ò B2 ¤§ª«¥ó¹êÅé ==");
+		out.println("== A é¡åˆ¥ç‰©ä»¶ obj5 åƒè€ƒ B2 ä¹‹ç‰©ä»¶å¯¦é«” ==");
 		A obj5 = new B2();
-		obj5.fun1();	//·|¶¡±µ¦s¨ú¨ì B2 ªº bb ÅÜ¼Æ
+		obj5.fun1();	//æœƒé–“æ¥å­˜å–åˆ° B2 çš„ bb è®Šæ•¸
 		obj5.showAA();
 		obj5.showAA(8888);
 		out.println("obj5.aa = " + obj5.aa);
 		//System.out.println("obj5.bb = " + obj5.bb);
-			//¿ù»~¡AA Ãş§Oªº obj5 ¨S¦³ bb ¦¨­ûÅÜ¼Æ
+			//éŒ¯èª¤ï¼ŒA é¡åˆ¥çš„ obj5 æ²’æœ‰ bb æˆå“¡è®Šæ•¸
 		//obj5.fun("if overload ==>");
-			//¿ù»~¡AA Ãş§O¨S¦³ fun2(String) ³oºØ°Ñ¼Æ«¬ºAªº¤èªk
+			//éŒ¯èª¤ï¼ŒA é¡åˆ¥æ²’æœ‰ fun2(String) é€™ç¨®åƒæ•¸å‹æ…‹çš„æ–¹æ³•
 	}
 }
 
@@ -53,33 +53,33 @@ class A {
 	public int aa = 1000;
 
 	public void fun1() {
-		out.println("A Ãş§Oªº fun1() ¤èªk");
+		out.println("A é¡åˆ¥çš„ fun1() æ–¹æ³•");
 	}
 
 	public void fun2() {
-		out.println("A Ãş§Oªº fun2() ¤èªk");
+		out.println("A é¡åˆ¥çš„ fun2() æ–¹æ³•");
 	}
 
-	public void showAA() {				//¦s¨ú A Ãş§O¤º©w¸qªº aa
+	public void showAA() {				//å­˜å– A é¡åˆ¥å…§å®šç¾©çš„ aa
 		out.println("call A class showAA() : aa = " + aa);
 	}
 
 	public void showAA(int aaValue) {
-		aa = aaValue;	//¦s¨ú A Ãş§O¤º©w¸qªº aa
+		aa = aaValue;	//å­˜å– A é¡åˆ¥å…§å®šç¾©çš„ aa
 		out.println("call A class showAA(int) : aa = " + aa);
 	}
 }
 
 class B1 extends A {
-	public String aa = "001-aa"; //ÁôÂÃÄ~©Ó¨Óªº aa,¦P¦W,«¬ºA¤£¦P
+	public String aa = "001-aa"; //éš±è—ç¹¼æ‰¿ä¾†çš„ aa,åŒå,å‹æ…‹ä¸åŒ
 	
-	public void showAA() {			   //¦s¨ú B1 Ãş§O¤º©w¸qªº aa
+	public void showAA() {			   //å­˜å– B1 é¡åˆ¥å…§å®šç¾©çš„ aa
 		out.println("call B1 class showAA() : aa = " + aa);
 	}
 
 	public void fun1() {
-		//¦^¶Ç«¬ºA¤@©w­n¬Û¦P¤~¯à override¡A§_«h·|¦³½sÄ¶¿ù»~
-		out.println("B1 Ãş§Oªº fun1() ¤èªk");
+		//å›å‚³å‹æ…‹ä¸€å®šè¦ç›¸åŒæ‰èƒ½ overrideï¼Œå¦å‰‡æœƒæœ‰ç·¨è­¯éŒ¯èª¤
+		out.println("B1 é¡åˆ¥çš„ fun1() æ–¹æ³•");
 	}
 }
 
@@ -88,14 +88,14 @@ class B2 extends A {
 	public int bb = 300;
 	
 	public final void fun1() {
-		//­×¹¢¦r¤£¦P¤@¼Ë¤]¬O override
-		out.println("B2 Ãş§Oªº fun1() ¤èªk");
+		//ä¿®é£¾å­—ä¸åŒä¸€æ¨£ä¹Ÿæ˜¯ override
+		out.println("B2 é¡åˆ¥çš„ fun1() æ–¹æ³•");
 		bb = bb + 10;
 		out.println("bb = " + bb);
 	}
 
 	public void fun2(String str) {
-		//¤£ºâ fun2() ªº overload¡A¤]¤£¬O override
-		out.println(str + "B1 Ãş§Oªº fun2() ¤èªk");
+		//ä¸ç®— fun2() çš„ overloadï¼Œä¹Ÿä¸æ˜¯ override
+		out.println(str + "B1 é¡åˆ¥çš„ fun2() æ–¹æ³•");
 	}
 }
